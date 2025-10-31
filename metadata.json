@@ -1,0 +1,5 @@
+{
+  "name": "AI Learning Buddy Chrome Extension",
+  "description": "A Chrome Extension that uses the Gemini API to explain any selected text on a webpage in simpler terms. Right-click on selected text to activate.",
+  "requestFramePermissions": []
+}

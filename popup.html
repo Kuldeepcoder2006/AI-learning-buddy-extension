@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Learning Buddy Explanation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for a better look and feel */
+        body {
+            /* Prevents flash of white background in dark mode */
+            background-color: #1f2937; 
+        }
+        /* Simple keyframe animation for the spinner */
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        .spinner {
+            border: 4px solid rgba(255, 255, 255, 0.2);
+            border-left-color: #3b82f6; /* Blue-500 */
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+        }
+        .dark .spinner {
+            border-left-color: #60a5fa; /* Blue-400 */
+        }
+    </style>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 min-h-screen">
+    <div class="p-6 space-y-6">
+        <!-- Header Section -->
+        <div>
+            <h1 class="text-xl font-bold text-blue-600 dark:text-blue-400">AI Learning Buddy</h1>
+            <p class="text-sm text-gray-500 dark:text-gray-400">Here's a simpler explanation for you.</p>
+        </div>
+
+        <!-- Original Text Section -->
+        <div class="space-y-2">
+            <h2 class="text-sm font-semibold text-gray-600 dark:text-gray-300 uppercase tracking-wider">Original Text</h2>
+            <blockquote id="original-text" class="p-4 bg-white dark:bg-gray-800 border-l-4 border-gray-300 dark:border-gray-600 rounded-r-lg italic text-gray-700 dark:text-gray-300 text-sm shadow-sm">
+                Loading selected text...
+            </blockquote>
+        </div>
+
+        <!-- Explanation Section -->
+        <div class="space-y-2">
+            <h2 class="text-sm font-semibold text-gray-600 dark:text-gray-300 uppercase tracking-wider">Simplified Explanation</h2>
+            <div id="explanation-container" class="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm min-h-[100px] flex items-center justify-center">
+                <!-- Loading Spinner -->
+                <div id="loader" class="text-center space-y-2">
+                    <div class="spinner mx-auto"></div>
+                    <p class="text-sm text-gray-500 dark:text-gray-400">Thinking...</p>
+                </div>
+                <!-- Explanation Content -->
+                <div id="explanation" class="text-base leading-relaxed hidden"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Learning Buddy Options</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Ensures dark mode background is applied immediately */
+        body { background-color: #f3f4f6; }
+        html.dark body { background-color: #111827; }
+    </style>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900">
+    <div class="container mx-auto p-8 max-w-lg">
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-xl">
+            <h1 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">AI Learning Buddy Settings</h1>
+            <p class="text-gray-600 dark:text-gray-400 mb-6">Please enter your Gemini API key. You can get a free key from Google AI Studio.</p>
+
+            <div class="mb-4">
+                <label for="api-key" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Gemini API Key</label>
+                <input type="password" id="api-key" class="w-full px-3 py-2 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-md text-gray-900 dark:text-white focus:ring-blue-500 focus:border-blue-500" placeholder="Enter your API key here">
+            </div>
+
+            <button id="save-btn" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:focus:ring-offset-gray-800 transition-colors duration-200">
+                Save Key
+            </button>
+            <p id="status" class="text-sm text-green-600 dark:text-green-400 mt-3 h-4 text-center"></p>
+        </div>
+    </div>
+    <script src="options.js"></script>
+</body>
+</html>

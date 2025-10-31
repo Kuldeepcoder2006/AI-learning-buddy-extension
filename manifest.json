@@ -1,0 +1,24 @@
+
+{
+  "manifest_version": 3,
+  "name": "AI Learning Buddy",
+  "version": "1.0",
+  "description": "Select text on any page, right-click, and get a simple explanation from AI.",
+  "permissions": [
+    "contextMenus",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "AI Learning Buddy",
+    "default_popup": "popup.html"
+  },
+  "options_page": "options.html",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
